@@ -47,7 +47,7 @@
 
   $list = array_values($list);
 
-  $output_json = json_encode($list, JSON_UNESCAPED_SLASHES);
+  $output_json = json_encode($list, 64); // 64 = JSON_UNESCAPED_SLASHES
 
   header('Content-Type: application/json');
   echo $output_json;
